@@ -466,13 +466,22 @@ main {
     padding-top: 25px
 }
 
+.plans-container--slider {
+    display: flex;
+    height: 316px;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+}
+
 .plans-container--card {
     position: relative;
+    scroll-snap-align: center;
     width: 70%;
-    min-width: 230px;
+    min-width: 190px;
     max-width: 300px;
     height: 250px;
-    margin: 50px auto 0;
+    margin: 50px 10px 0;
     padding: 0 15px;
     background-color: var(--white);
     border-radius: 15px;
@@ -521,4 +530,86 @@ main {
     font-weight: 500;
     font-size: 1.2rem;
     line-height: 1.5rem;
+}
+
+.plan-card--ca {
+    width: 150px;
+    height: 48px;
+    margin-top: 20px;
+    background-color: var(--off-white);
+    border: 2px solid var(--bitcoin-orange);
+    border-radius: 4px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    line-height: 1.8rem;
+    color: var(--warm-black);
+}
+
+.plan-card--ca span {
+    display: inline-block;
+    background-image: url("../assets/icons/ArrowRight.svg");
+    width: 20px;
+    height: 20px;
+    vertical-align: text-bottom;
+}
+
+.trimestral {
+    background-color: var(--bitcoin-orange);
+}
+
+.trimestral .plan-card--title,
+.trimestral .plan-card--price {
+    color: var(--white)
+}
+
+.trimestral .plan-card--saving {
+    color: var(--off-white);
+}
+
+.mensual {
+    background-color: var(--secondary-blue);
+}
+
+.mensual .plan-card--title,
+.mensual .plan-card--price {
+    color: var(--white)
+}
+
+.mensual .plan-card--saving {
+    color: var(--off-white);
+}
+
+.mensual .recomended {
+    background-color: var(--white);
+    color: var(--warm-black-plus-one);
+}
+
+footer {
+    display: flex;
+    width: 100%;
+    height: 150px;
+    background-color: var(--bitcoin-orange);
+}
+
+footer section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.footer-left ul {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    font-weight: 500;
+    list-style: none;
+}
+
+.footer-left li {
+    margin: 10px 0;
+} 
+
+.footer-left a {
+    text-decoration: none;
+    color: var(--white);
 }
